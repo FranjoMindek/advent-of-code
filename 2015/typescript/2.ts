@@ -1,6 +1,8 @@
 const input = await Deno.readTextFile('./2.txt');
 const inputs = input.split(/\r?\n/);
-const dimensions = inputs.map((input) => input.split("x").map(string => parseInt(string)).sort((a, b) => a-b));
+const dimensions = inputs.map((input) => input.split("x")
+  .map(string => parseInt(string))
+  .sort((a, b) => a-b));
 
 function calculatePapaer(dimensions: number[][]): number {
   let area = 0;
